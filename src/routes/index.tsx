@@ -1,11 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Play, Sparkles, Box, Layers, Eye, GraduationCap } from "lucide-react";
+import { ArrowRight, Play, Sparkles, Box, Layers, Eye, GraduationCap, MessageSquare } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { FloatingRow } from "@/components/FloatingRow";
 import heroImg from "@/assets/ramxr-hero.png";
-import vrHeadset from "@/assets/vr-headset.jpg";
+import vrExperience from "@/assets/Ima.jpg";
+import vrHeadset from "@/assets/Nakul_Daa.png";
 import vrClassroom from "@/assets/vr-classroom.jpg";
 import vrEngineer from "@/assets/vr-engineer.jpg";
 
@@ -59,6 +60,53 @@ function Home() {
           { title: "Learn by doing", desc: "Real-time descriptions and explanations appear as you explore.", icon: <Eye className="h-5 w-5" /> },
         ]}
         badge={{ label: "Latency", value: "12 ms · Real-time" }}
+      />
+
+      <FloatingRow
+        side="left"
+        image={vrExperience}
+        alt="Precision learning guided pathways"
+        eyebrow="Precision Learning"
+        heading={<>🚀 Precision Learning</>}
+        body={
+          <>
+            <p>Not all interactions are meaningful. We design guided learning paths inside VR so users focus on what matters most.</p>
+            <p>Users don’t just explore randomly — they follow structured sequences that build understanding step by step.</p>
+            <ul className="mt-3 space-y-1 list-none">
+              <li>• Guided pathways for complex systems</li>
+              <li>• Context-aware instructions inside VR</li>
+              <li>• Reduced cognitive overload through smart design</li>
+            </ul>
+          </>
+        }
+        chips={[
+          { title: "Guided pathways", desc: "Guided pathways for complex systems", icon: <Play className="h-5 w-5" /> },
+          { title: "Context-aware", desc: "Context-aware instructions inside VR", icon: <MessageSquare className="h-5 w-5" /> },
+          { title: "Reduced overload", desc: "Reduced cognitive overload through smart design", icon: <Layers className="h-5 w-5" /> },
+        ]}
+      />
+
+      <FloatingRow
+        side="right"
+        image={vrHeadset}
+        alt="Layered understanding of complex systems"
+        eyebrow="Layered Understanding"
+        heading={<>🧩 Layered Understanding</>}
+        body={
+          <>
+            <p>Complex systems aren’t meant to be understood all at once.</p>
+            <p>We break models into layers so users can progressively reveal complexity — from basic structure to deep technical details.</p>
+            <ul className="mt-3 space-y-1 list-none">
+              <li>• Toggle between beginner and advanced views</li>
+              <li>• Hide or isolate subsystems instantly</li>
+              <li>• Understand relationships between components clearly</li>
+            </ul>
+          </>
+        }
+        chips={[
+          { title: "Toggle views", desc: "Switch between beginner and advanced perspectives", icon: <Box className="h-5 w-5" /> },
+          { title: "Isolate subsystems", desc: "Hide or isolate subsystems instantly", icon: <Layers className="h-5 w-5" /> },
+        ]}
       />
       <Metrics />
       <Footer />
