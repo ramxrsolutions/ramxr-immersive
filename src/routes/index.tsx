@@ -108,11 +108,8 @@ function Hero() {
 
           <div className="lg:col-span-6 lg:order-1 relative">
             <Reveal delay={200}>
-              <div className="relative rounded-[2rem] overflow-hidden gradient-border shadow-glow float-slow hidden dark:block">
+              <div className="relative rounded-[2rem] overflow-hidden gradient-border shadow-glow float-slow">
                 <img src={heroImg} alt="RamXR VR headset and controllers" className="w-full h-auto" />
-              </div>
-              <div className="relative rounded-[2rem] overflow-hidden gradient-border shadow-glow float-slow dark:hidden">
-                <img src={vrHeadset} alt="VR headset" className="w-full h-auto" />
               </div>
               <div className="absolute -top-6 -left-6 glass rounded-2xl px-4 py-3 float">
                 <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Module</div>
