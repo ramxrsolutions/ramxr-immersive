@@ -183,8 +183,8 @@
   to { transform: translateX(-50%); }
 }
 
-.float { animation: float-y 6s ease-in-out infinite; }
-.float-slow { animation: float-y-slow 9s ease-in-out infinite; }
+.float { animation: float-y 5.5s ease-in-out infinite; }
+.float-slow { animation: float-y-slow 8.5s ease-in-out infinite; }
 .pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
 .drift { animation: drift 12s ease-in-out infinite; }
 .reveal { animation: reveal 0.9s cubic-bezier(.2,.7,.2,1) both; }
