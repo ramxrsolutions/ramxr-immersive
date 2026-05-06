@@ -5,8 +5,8 @@ import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { FloatingRow } from "@/components/FloatingRow";
 import heroImg from "@/assets/ramxr-hero.png";
-import vrExperience from "@/assets/Ima.jpg";
-import vrHeadset from "@/assets/Nakul_Daa.png";
+import vrExperience from "@/assets/Nakul_Daa.png";
+import vrHeadset from "@/assets/Ima.jpg";
 import vrClassroom from "@/assets/vr-classroom.jpg";
 import vrEngineer from "@/assets/vr-engineer.jpg";
 
