@@ -1,0 +1,81 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { Compass, Layers, MousePointer2, Workflow } from "lucide-react";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { FloatingRow, PageHero } from "@/components/FloatingRow";
+import vrTeam from "@/assets/vr-team.jpg";
+import vrBrain from "@/assets/vr-brain.jpg";
+import hologram from "@/assets/hologram.jpg";
+
+export const Route = createFileRoute("/about")({
+  component: About,
+  head: () => ({
+    meta: [
+      { title: "About — RamXR Solutions" },
+      { name: "description", content: "RamXR Solutions is focused on transforming education and training through immersive virtual reality experiences." },
+      { property: "og:title", content: "About RamXR Solutions" },
+      { property: "og:description", content: "Replacing passive learning with interactive exploration through immersive VR." },
+      { property: "og:image", content: vrTeam },
+    ],
+  }),
+});
+
+function About() {
+  return (
+    <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
+      <Navbar />
+      <PageHero
+        eyebrow="About"
+        title={<>Redefining learning through <span className="text-gradient-brand">immersion</span>.</>}
+        subtitle="Our approach replaces passive learning with interactive exploration. Instead of imagining how systems work, users can step inside them, observe details closely, and interact with every part."
+      />
+      <FloatingRow
+        side="left"
+        image={vrTeam}
+        alt="Team collaborating around a holographic display"
+        eyebrow="Who we are"
+        heading={<>A platform built for <span className="text-gradient-brand">deeper understanding</span>.</>}
+        body={
+          <>
+            <p>RamXR Solutions is focused on transforming education and training through immersive virtual reality experiences.</p>
+            <p>This creates a more intuitive and engaging way to understand complex subjects — one where curiosity leads, and the environment responds.</p>
+          </>
+        }
+        chips={[
+          { title: "Human-led design", desc: "Every module starts with the learner — not the technology.", icon: <MousePointer2 className="h-5 w-5" /> },
+          { title: "Built around clarity", desc: "Complex topics, presented in ways that feel obvious once seen.", icon: <Compass className="h-5 w-5" /> },
+        ]}
+        badge={{ label: "Studio", value: "Experience Design" }}
+      />
+      <FloatingRow
+        side="right"
+        image={vrBrain}
+        alt="Glowing 3D brain model"
+        eyebrow="Vision"
+        heading={<>Our <span className="text-gradient-brand">vision</span>.</>}
+        body={<p>To make learning more intuitive, accessible, and engaging by enabling users to experience knowledge in a fully interactive virtual environment.</p>}
+        chips={[
+          { title: "Intuitive", desc: "Concepts you can reach out and touch.", icon: <Layers className="h-5 w-5" /> },
+          { title: "Accessible", desc: "Hands-on learning without physical limitations.", icon: <Compass className="h-5 w-5" /> },
+          { title: "Engaging", desc: "Designed to hold attention and reward exploration.", icon: <Workflow className="h-5 w-5" /> },
+        ]}
+        badge={{ label: "Mission", value: "Experience knowledge" }}
+      />
+      <FloatingRow
+        side="left"
+        image={hologram}
+        alt="Holographic UI"
+        eyebrow="Approach"
+        heading={<>How we <span className="text-gradient-brand">build experiences</span>.</>}
+        body={<p>Every VR module is designed with clarity and interaction in mind. The goal is simple — make complex concepts easy to explore.</p>}
+        chips={[
+          { title: "Structured 3D modeling", desc: "Accurate geometry and clean topology, ready for interaction.", icon: <Layers className="h-5 w-5" /> },
+          { title: "Component-level interaction", desc: "Every meaningful part can be selected and studied.", icon: <MousePointer2 className="h-5 w-5" /> },
+          { title: "Real-time information", desc: "Context appears in the moment it’s needed.", icon: <Workflow className="h-5 w-5" /> },
+          { title: "Smooth navigation", desc: "Move through environments without friction.", icon: <Compass className="h-5 w-5" /> },
+        ]}
+      />
+      <Footer />
+    </div>
+  );
+}
