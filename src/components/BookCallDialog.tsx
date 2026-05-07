@@ -7,7 +7,7 @@ import {
   DialogDescription,
   DialogTrigger,
 } from "./ui/dialog";
-import { submitContactForm } from "@/server/contactFn";
+import { submitContactForm } from "@/lib/contact.functions";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
 
