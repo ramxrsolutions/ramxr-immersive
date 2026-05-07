@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { ThemeToggle } from "./ThemeToggle";
-
+import { BookCallDialog } from "./BookCallDialog";
 const items = [
   { label: "Home", to: "/" as const },
   { label: "About", to: "/about" as const },
@@ -56,12 +56,11 @@ export function Navbar() {
 
           <div className="flex items-center gap-3">
             <ThemeToggle />
-            <Link
-              to="/demo"
-              className="hidden sm:inline-flex items-center rounded-full px-4 py-2 text-sm font-medium bg-gradient-brand text-primary-foreground hover-lift"
-            >
-              Book a Demo
-            </Link>
+            <BookCallDialog>
+              <button className="hidden sm:inline-flex items-center rounded-full px-4 py-2 text-sm font-medium bg-gradient-brand text-primary-foreground hover-lift cursor-pointer">
+                Book a Demo
+              </button>
+            </BookCallDialog>
             <button
               onClick={() => setOpen((v) => !v)}
               className="md:hidden h-10 w-10 rounded-full glass grid place-items-center"

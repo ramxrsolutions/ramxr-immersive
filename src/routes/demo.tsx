@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { FloatingRow, PageHero } from "@/components/FloatingRow";
 import hologram from "@/assets/hologram.jpg";
 import vrExperience from "@/assets/vr-experience.jpg";
+import { BookCallDialog } from "@/components/BookCallDialog";
 
 export const Route = createFileRoute("/demo")({
   component: Demo,
@@ -42,9 +43,11 @@ function Demo() {
         ]}
         badge={{ label: "Live Session", value: "Real-time 3D" }}
       >
-        <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground hover-lift">
-          Book a Demo <ArrowRight className="h-4 w-4" />
-        </Link>
+        <BookCallDialog>
+          <button className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground hover-lift cursor-pointer">
+            Book a Demo <ArrowRight className="h-4 w-4" />
+          </button>
+        </BookCallDialog>
       </FloatingRow>
 
       <FloatingRow
@@ -59,9 +62,11 @@ function Demo() {
           { title: "Built for decision-makers", desc: "Designed so non-technical stakeholders can follow along easily.", icon: <MessageSquare className="h-5 w-5" /> },
         ]}
       >
-        <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground hover-lift">
-          Book a Demo <ArrowRight className="h-4 w-4" />
-        </Link>
+        <BookCallDialog>
+          <button className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground hover-lift cursor-pointer">
+            Book a Demo <ArrowRight className="h-4 w-4" />
+          </button>
+        </BookCallDialog>
       </FloatingRow>
       <Footer />
     </div>

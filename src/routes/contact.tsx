@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { PageHero } from "@/components/FloatingRow";
 import vrGear from "@/assets/vr-gear.jpg";
+import { BookCallDialog } from "@/components/BookCallDialog";
 
 export const Route = createFileRoute("/contact")({
   component: Contact,
@@ -58,12 +59,13 @@ function Contact() {
             ))}
 
             <Reveal delay={400}>
-              <a
-                href="mailto:contact@ramxrsolutions.com"
-                className="mt-2 inline-flex items-center justify-center w-full gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground hover-lift"
-              >
-                Start a Conversation
-              </a>
+              <BookCallDialog>
+                <button
+                  className="mt-2 inline-flex items-center justify-center w-full gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground hover-lift cursor-pointer"
+                >
+                  Start a Conversation
+                </button>
+              </BookCallDialog>
             </Reveal>
           </div>
         </div>
