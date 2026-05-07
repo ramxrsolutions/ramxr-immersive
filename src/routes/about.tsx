@@ -40,10 +40,6 @@ function About() {
             <p>This creates a more intuitive and engaging way to understand complex subjects — one where curiosity leads, and the environment responds.</p>
           </>
         }
-        chips={[
-          { title: "Human-led design", desc: "Every module starts with the learner — not the technology.", icon: <MousePointer2 className="h-5 w-5" /> },
-          { title: "Built around clarity", desc: "Complex topics, presented in ways that feel obvious once seen.", icon: <Compass className="h-5 w-5" /> },
-        ]}
         badge={{ label: "Studio", value: "Experience Design" }}
       />
       <FloatingRow

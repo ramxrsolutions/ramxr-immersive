@@ -152,6 +152,35 @@
             mask-composite: exclude;
     pointer-events: none;
   }
+
+  /* RamXR orange->pink premium theme (scoped utility) */
+  .ramxr-gradient-theme {
+    --gradient-brand: linear-gradient(135deg, #FF9A5A 0%, #FF7A45 20%, #FF5E8A 65%, #FF73A8 100%);
+    --orange-glow: rgba(255,154,90,0.18);
+    --pink-glow: rgba(255,94,138,0.32);
+    --shadow-glow: 0 30px 80px -22px rgba(255,94,138,0.28);
+    position: relative;
+  }
+
+  /* subtle pink right-side glow */
+  .ramxr-gradient-theme::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    right: -8%;
+    top: 0;
+    bottom: 0;
+    width: 46%;
+    border-radius: inherit;
+    background: radial-gradient(closest-side at 85% 50%, rgba(255,115,168,0.16), transparent 36%);
+    mix-blend-mode: normal;
+    opacity: 1;
+  }
+
+  /* hover accent for elements inside theme */
+  .ramxr-gradient-theme .hover-lift:hover {
+    box-shadow: var(--shadow-glow);
+  }
 }
 
 @keyframes float-y {
