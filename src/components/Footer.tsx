@@ -11,7 +11,7 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/60 mt-12">
+    <footer className="border-t border-border/60 mt-12 ramxr-gradient-theme">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-14 grid md:grid-cols-3 gap-10">
         <div>
           <div className="flex items-center gap-2">
