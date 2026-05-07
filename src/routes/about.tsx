@@ -10,7 +10,7 @@ export const Route = createFileRoute("/about")({
   component: About,
   head: () => ({
     meta: [
-      { title: "About — RamXR Solutions" },
+      { title: "About RamXR Solutions" },
       { name: "description", content: "RamXR Solutions is focused on transforming education and training through immersive virtual reality experiences." },
       { property: "og:title", content: "About RamXR Solutions" },
       { property: "og:description", content: "Replacing passive learning with interactive exploration through immersive VR." },
@@ -37,7 +37,7 @@ function About() {
         body={
           <>
             <p>RamXR Solutions is focused on transforming education and training through immersive virtual reality experiences.</p>
-            <p>This creates a more intuitive and engaging way to understand complex subjects — one where curiosity leads, and the environment responds.</p>
+            <p>This creates a more intuitive and engaging way to understand complex subjects one where curiosity leads, and the environment responds.</p>
           </>
         }
           // badge={{ label: "Studio", value: "Experience Design" }}

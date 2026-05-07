@@ -83,7 +83,7 @@ export const submitContactForm = async ({ data }: { data: { name: string; email:
       body: JSON.stringify({
         sender: { name: SENDER_NAME, email: SENDER_EMAIL },
         to: [{ email: data.email, name: data.name }],
-        subject: "We received your demo request — RamXR Solutions",
+        subject: "We received your demo request RamXR Solutions",
         htmlContent: `
           <html>
             <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">

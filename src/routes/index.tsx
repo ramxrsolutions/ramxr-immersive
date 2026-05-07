@@ -14,9 +14,9 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () => ({
     meta: [
-      { title: "RamXR Solutions — Step Inside Learning with Virtual Reality" },
+      { title: "RamXR Solutions Step Inside Learning with Virtual Reality" },
       { name: "description", content: "RamXR Solutions transforms how knowledge is experienced through fully interactive 3D VR environments." },
-      { property: "og:title", content: "RamXR Solutions — Immersive VR Learning" },
+      { property: "og:title", content: "RamXR Solutions Immersive VR Learning" },
       { property: "og:description", content: "Explore complex systems through fully interactive 3D environments where every component can be seen, understood, and experienced in real time." },
     ],
   }),
@@ -53,7 +53,7 @@ function Home() {
         alt="VR engineer interacting with 3D model"
         eyebrow="Experience"
         heading={<>Explore. Interact. <span className="text-gradient-brand">Understand.</span></>}
-        body={<p>Our VR environments simulate real-world systems with high accuracy and interactivity. Users are not just observers — they become active participants.</p>}
+        body={<p>Our VR environments simulate real-world systems with high accuracy and interactivity. Users are not just observers they become active participants.</p>}
         chips={[
           { title: "Move inside virtual models", desc: "Walk around and look from any angle as if it were physically in front of you.", icon: <GraduationCap className="h-5 w-5" /> },
           { title: "Interact with components", desc: "Pick up, rotate, and isolate individual parts to study them closely.", icon: <Box className="h-5 w-5" /> },
@@ -69,7 +69,7 @@ function Home() {
           alt="Holographic UI"
           eyebrow="Approach"
           heading={<>How we <span className="text-gradient-brand">build experiences</span>.</>}
-          body={<p>Every VR module is designed with clarity and interaction in mind. The goal is simple — make complex concepts easy to explore.</p>}
+          body={<p>Every VR module is designed with clarity and interaction in mind. The goal is simple make complex concepts easy to explore.</p>}
           chips={[
             { title: "Structured 3D modeling", desc: "Accurate geometry and clean topology, ready for interaction.", icon: <Layers className="h-5 w-5" /> },
             { title: "3DOF and 6DOF Techniques", desc: "Supports both 3 Degrees of Freedom and 6 Degrees of Freedom interactions for immersive and realistic VR experiences.", icon: <Move3D className="h-5 w-5" /> },
@@ -89,7 +89,7 @@ function Home() {
         body={
           <>
             <p>Complex systems aren’t meant to be understood all at once.</p>
-            <p>We break models into layers so users can progressively reveal complexity — from basic structure to deep technical details.</p>
+            <p>We break models into layers so users can progressively reveal complexity from basic structure to deep technical details.</p>
             <ul className="mt-3 space-y-1 list-none">
               <li>• Toggle between beginner and advanced views</li>
               <li>• Hide or isolate subsystems instantly</li>
@@ -143,14 +143,6 @@ function Hero() {
             <Reveal delay={200}>
               <div className="relative rounded-[2rem] overflow-hidden gradient-border shadow-glow float-slow">
                 <img src={heroImg} alt="RamXR VR headset and controllers" className="w-full h-auto" />
-              </div>
-              <div className="absolute -top-6 -left-6 glass rounded-2xl px-4 py-3 float">
-                <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Module</div>
-                <div className="text-sm font-medium">Anatomy · Layer 03</div>
-              </div>
-              <div className="absolute -bottom-6 -right-6 glass rounded-2xl px-4 py-3 float" style={{ animationDelay: "-2s" }}>
-                <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Latency</div>
-                <div className="text-sm font-medium">12 ms · Real-time</div>
               </div>
             </Reveal>
           </div>

@@ -11,9 +11,9 @@ export const Route = createFileRoute("/demo")({
   component: Demo,
   head: () => ({
     meta: [
-      { title: "Demo — RamXR Solutions" },
+      { title: "Demo RamXR Solutions" },
       { name: "description", content: "Experience immersive learning in real time. Request a guided walkthrough of our VR systems." },
-      { property: "og:title", content: "Experience It Yourself — RamXR Demo" },
+      { property: "og:title", content: "Experience It Yourself RamXR Demo" },
       { property: "og:description", content: "See how interaction and visualization can transform learning experiences." },
       { property: "og:image", content: hologram },
     ],
@@ -56,7 +56,7 @@ function Demo() {
         alt="Immersive VR environment"
         eyebrow="Request"
         heading={<>Request a <span className="text-gradient-brand">demo</span>.</>}
-        body={<p>Tell us a little about what you’d like to explore — a curriculum, a training program, or a custom system — and we’ll prepare a session tailored to it.</p>}
+        body={<p>Tell us a little about what you’d like to explore a curriculum, a training program, or a custom system and we’ll prepare a session tailored to it.</p>}
         chips={[
           { title: "Tailored to your domain", desc: "We adapt the walkthrough to match the systems you care about.", icon: <Play className="h-5 w-5" /> },
           { title: "Built for decision-makers", desc: "Designed so non-technical stakeholders can follow along easily.", icon: <MessageSquare className="h-5 w-5" /> },

@@ -10,9 +10,9 @@ export const Route = createFileRoute("/projects")({
   component: Projects,
   head: () => ({
     meta: [
-      { title: "Projects — RamXR Solutions" },
+      { title: "Projects RamXR Solutions" },
       { name: "description", content: "Interactive VR models including a Dog Anatomy learning model and a fully navigable Submarine engineering model." },
-      { property: "og:title", content: "Interactive VR Models — RamXR Projects" },
+      { property: "og:title", content: "Interactive VR Models RamXR Projects" },
       { property: "og:description", content: "Explore how virtual environments simplify complex learning through interaction and visualization." },
       { property: "og:image", content: dogAnatomy },
     ],
@@ -33,7 +33,7 @@ function Projects() {
         image={dogAnatomy}
         alt="Dog Anatomy VR Model"
         eyebrow="Project 01"
-        heading={<>Dog Anatomy — <span className="text-gradient-brand">VR learning model</span>.</>}
+        heading={<>Dog Anatomy <span className="text-gradient-brand">VR learning model</span>.</>}
         body={
           <>
             <p>An interactive virtual model designed for veterinary education.</p>
@@ -58,7 +58,7 @@ function Projects() {
         image={submarine}
         alt="Submarine Interactive Model"
         eyebrow="Project 02"
-        heading={<>Submarine — <span className="text-gradient-brand">interactive engineering model</span>.</>}
+        heading={<>Submarine <span className="text-gradient-brand">interactive engineering model</span>.</>}
         body={
           <>
             <p>A fully navigable virtual submarine designed to demonstrate engineering concepts in an interactive way.</p>

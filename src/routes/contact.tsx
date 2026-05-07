@@ -11,9 +11,9 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
   head: () => ({
     meta: [
-      { title: "Contact — RamXR Solutions" },
+      { title: "Contact RamXR Solutions" },
       { name: "description", content: "Reach out to learn more about our immersive VR learning solutions, request a demo, or discuss collaborations." },
-      { property: "og:title", content: "Get in Touch — RamXR Solutions" },
+      { property: "og:title", content: "Get in Touch RamXR Solutions" },
       { property: "og:description", content: "Interested in immersive learning solutions? Reach out to RamXR Solutions." },
       { property: "og:image", content: vrGear },
     ],

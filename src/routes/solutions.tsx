@@ -11,9 +11,9 @@ export const Route = createFileRoute("/solutions")({
   component: Solutions,
   head: () => ({
     meta: [
-      { title: "Solutions — RamXR Solutions" },
+      { title: "Solutions RamXR Solutions" },
       { name: "description", content: "Applications of immersive VR across education, training, and visualization." },
-      { property: "og:title", content: "Solutions — Immersive VR for Education & Training" },
+      { property: "og:title", content: "Solutions Immersive VR for Education & Training" },
       { property: "og:description", content: "Virtual reality systems designed to enhance understanding, improve training, and simplify visualization." },
       { property: "og:image", content: vrClassroom },
     ],
@@ -51,7 +51,7 @@ function Solutions() {
         heading={<>Practice without <span className="text-gradient-brand">limits</span>.</>}
         body={<p>Enable hands-on learning without physical limitations. Virtual simulations allow users to practice, explore, and understand systems in a controlled environment.</p>}
         chips={[
-          { title: "Safe to repeat", desc: "Try, fail, and refine — without consequence or cost.", icon: <Wrench className="h-5 w-5" /> },
+          { title: "Safe to repeat", desc: "Try, fail, and refine without consequence or cost.", icon: <Wrench className="h-5 w-5" /> },
           { title: "Realistic systems", desc: "Behaviour mirrors what trainees will encounter in the field.", icon: <Layers className="h-5 w-5" /> },
           { title: "Measurable progress", desc: "Built so instructors can observe and guide.", icon: <Box className="h-5 w-5" /> },
         ]}
