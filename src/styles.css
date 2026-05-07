@@ -201,6 +201,8 @@
 
   .ramxr-footer-theme {
     position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(135deg, rgba(255,154,90,0.12) 0%, rgba(255,122,69,0.08) 22%, rgba(255,94,138,0.12) 68%, rgba(255,115,168,0.18) 100%);
   }
 
   .ramxr-footer-theme::before {
@@ -212,6 +214,18 @@
     height: 1px;
     background: linear-gradient(90deg, rgba(255,154,90,0.5), rgba(255,94,138,0.6), rgba(255,115,168,0.7));
     pointer-events: none;
+  }
+
+  .ramxr-footer-theme::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    right: -10%;
+    top: 0;
+    bottom: 0;
+    width: 46%;
+    background: radial-gradient(closest-side at 82% 50%, rgba(255,115,168,0.18), rgba(255,94,138,0.09) 34%, transparent 66%);
+    opacity: 0.9;
   }
 
   .ramxr-footer-divider {
