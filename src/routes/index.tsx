@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Play, Sparkles, Box, Layers, Eye, GraduationCap, MessageSquare, MousePointer2, Workflow, Compass } from "lucide-react";
+import { ArrowRight, Play, Sparkles, Box, Layers, Eye, GraduationCap, MessageSquare, MousePointer2, Workflow, Compass, Move3D } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
@@ -62,20 +62,23 @@ function Home() {
         badge={{ label: "Latency", value: "12 ms · Real-time" }}
       />
 
-      <FloatingRow
-        side="left"
-        image={hologram}
-        alt="Holographic UI"
-        eyebrow="Approach"
-        heading={<>How we <span className="text-gradient-brand">build experiences</span>.</>}
-        body={<p>Every VR module is designed with clarity and interaction in mind. The goal is simple — make complex concepts easy to explore.</p>}
-        chips={[
-          { title: "Structured 3D modeling", desc: "Accurate geometry and clean topology, ready for interaction.", icon: <Layers className="h-5 w-5" /> },
-          { title: "Component-level interaction", desc: "Every meaningful part can be selected and studied.", icon: <MousePointer2 className="h-5 w-5" /> },
-          { title: "Real-time information", desc: "Context appears in the moment it’s needed.", icon: <Workflow className="h-5 w-5" /> },
-          { title: "Smooth navigation", desc: "Move through environments without friction.", icon: <Compass className="h-5 w-5" /> },
-        ]}
-      />
+      <div style={{ maxWidth: "70%", margin: "0 auto" }}>
+        <FloatingRow
+          side="left"
+          image={hologram}
+          alt="Holographic UI"
+          eyebrow="Approach"
+          heading={<>How we <span className="text-gradient-brand">build experiences</span>.</>}
+          body={<p>Every VR module is designed with clarity and interaction in mind. The goal is simple — make complex concepts easy to explore.</p>}
+          chips={[
+            { title: "Structured 3D modeling", desc: "Accurate geometry and clean topology, ready for interaction.", icon: <Layers className="h-5 w-5" /> },
+            { title: "3DOF and 6DOF Techniques", desc: "Supports both 3 Degrees of Freedom and 6 Degrees of Freedom interactions for immersive and realistic VR experiences.", icon: <Move3D className="h-5 w-5" /> },
+            { title: "Component-level interaction", desc: "Every meaningful part can be selected and studied.", icon: <MousePointer2 className="h-5 w-5" /> },
+            { title: "Real-time information", desc: "Context appears in the moment it's needed.", icon: <Workflow className="h-5 w-5" /> },
+            { title: "Smooth navigation", desc: "Move through environments without friction.", icon: <Compass className="h-5 w-5" /> },
+          ]}
+        />
+      </div>
 
       <FloatingRow
         side="right"
