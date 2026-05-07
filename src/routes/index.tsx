@@ -45,7 +45,7 @@ function Home() {
           { title: "Real-time Exploration", desc: "Navigate inside detailed 3D environments with instant response and depth.", icon: <Layers className="h-5 w-5" /> },
           { title: "Practical Visualization", desc: "Make abstract concepts tangible through guided immersive experiences.", icon: <Eye className="h-5 w-5" /> },
         ]}
-        badge={{ label: "Module", value: "Anatomy · Layer 03" }}
+          // badge={{ label: "Module", value: "Anatomy · Layer 03" }}
       />
       <FloatingRow
         side="right"
@@ -59,7 +59,7 @@ function Home() {
           { title: "Interact with components", desc: "Pick up, rotate, and isolate individual parts to study them closely.", icon: <Box className="h-5 w-5" /> },
           { title: "Learn by doing", desc: "Real-time descriptions and explanations appear as you explore.", icon: <Eye className="h-5 w-5" /> },
         ]}
-        badge={{ label: "Latency", value: "12 ms · Real-time" }}
+          // badge={{ label: "Latency", value: "12 ms · Real-time" }}
       />
 
       <div style={{ maxWidth: "70%", margin: "0 auto" }}>

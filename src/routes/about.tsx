@@ -40,7 +40,7 @@ function About() {
             <p>This creates a more intuitive and engaging way to understand complex subjects — one where curiosity leads, and the environment responds.</p>
           </>
         }
-        badge={{ label: "Studio", value: "Experience Design" }}
+          // badge={{ label: "Studio", value: "Experience Design" }}
       />
       <FloatingRow
         side="right"
@@ -54,7 +54,7 @@ function About() {
           { title: "Accessible", desc: "Hands-on learning without physical limitations.", icon: <Compass className="h-5 w-5" /> },
           { title: "Engaging", desc: "Designed to hold attention and reward exploration.", icon: <Workflow className="h-5 w-5" /> },
         ]}
-        badge={{ label: "Mission", value: "Experience knowledge" }}
+          // badge={{ label: "Mission", value: "Experience knowledge" }}
       />
       {/* 'How we build experiences' moved to Home; original image removed per task instructions */}
       <Footer />

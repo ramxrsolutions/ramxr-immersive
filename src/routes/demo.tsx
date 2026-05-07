@@ -41,7 +41,7 @@ function Demo() {
           { title: "Click to learn", desc: "Tap any component to surface its name and description in real time.", icon: <Layers className="h-5 w-5" /> },
           { title: "Live Q&A", desc: "Speak with the experience team during the session.", icon: <MessageSquare className="h-5 w-5" /> },
         ]}
-        badge={{ label: "Live Session", value: "Real-time 3D" }}
+          // badge={{ label: "Live Session", value: "Real-time 3D" }}
       >
         <BookCallDialog>
           <button className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground hover-lift cursor-pointer">

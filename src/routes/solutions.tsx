@@ -41,7 +41,7 @@ function Solutions() {
           { title: "Hands-on exploration", desc: "Learners can examine, rotate, and disassemble virtual models freely.", icon: <MousePointer2 className="h-5 w-5" /> },
           { title: "Visual clarity", desc: "Spatial layouts make abstract relationships obvious.", icon: <Eye className="h-5 w-5" /> },
         ]}
-        badge={{ label: "Use case", value: "Classrooms · Curriculum" }}
+          // badge={{ label: "Use case", value: "Classrooms · Curriculum" }}
       />
       <FloatingRow
         side="right"
@@ -55,7 +55,7 @@ function Solutions() {
           { title: "Realistic systems", desc: "Behaviour mirrors what trainees will encounter in the field.", icon: <Layers className="h-5 w-5" /> },
           { title: "Measurable progress", desc: "Built so instructors can observe and guide.", icon: <Box className="h-5 w-5" /> },
         ]}
-        badge={{ label: "Use case", value: "Industrial · Field Ops" }}
+          // badge={{ label: "Use case", value: "Industrial · Field Ops" }}
       />
       <FloatingRow
         side="left"
@@ -69,7 +69,7 @@ function Solutions() {
           { title: "Interactive context", desc: "Information surfaces exactly where the eye is already focused.", icon: <MousePointer2 className="h-5 w-5" /> },
           { title: "Spatial understanding", desc: "Build a mental model that text and diagrams can’t deliver.", icon: <Eye className="h-5 w-5" /> },
         ]}
-        badge={{ label: "Use case", value: "R&D · Engineering" }}
+          // badge={{ label: "Use case", value: "R&D · Engineering" }}
       />
       <Footer />
     </div>

@@ -46,7 +46,7 @@ function Projects() {
           { title: "Real-time descriptions", desc: "Contextual information appears the moment a part is selected.", icon: <Layers className="h-5 w-5" /> },
           { title: "Structured learning", desc: "Guided flow through systems for steady, lasting understanding.", icon: <Workflow className="h-5 w-5" /> },
         ]}
-        badge={{ label: "Domain", value: "Veterinary · Anatomy" }}
+          // badge={{ label: "Domain", value: "Veterinary · Anatomy" }}
       >
         <Link to="/demo" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground hover-lift">
           View in Action <ArrowRight className="h-4 w-4" />
@@ -71,7 +71,7 @@ function Projects() {
           { title: "Functional understanding", desc: "Watch systems respond and connect in real time.", icon: <Layers className="h-5 w-5" /> },
           { title: "Immersive exploration", desc: "Free movement through every section of the vessel.", icon: <Box className="h-5 w-5" /> },
         ]}
-        badge={{ label: "Domain", value: "Engineering · Training" }}
+          // badge={{ label: "Domain", value: "Engineering · Training" }}
       >
         <Link to="/demo" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground hover-lift">
           View in Action <ArrowRight className="h-4 w-4" />

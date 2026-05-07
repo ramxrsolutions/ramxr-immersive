@@ -11,7 +11,6 @@ export function FloatingRow({
   heading,
   body,
   chips,
-  badge,
   children,
 }: {
   image: string;
@@ -21,7 +20,6 @@ export function FloatingRow({
   heading: ReactNode;
   body?: ReactNode;
   chips?: Chip[];
-  badge?: { label: string; value: string };
   children?: ReactNode;
 }) {
   const imgFirst = side === "left";
@@ -31,16 +29,6 @@ export function FloatingRow({
         <div className="relative rounded-[2rem] overflow-hidden gradient-border float-slow shadow-glow">
           <img src={image} alt={alt} loading="lazy" width={1280} height={896} className="w-full h-auto object-cover" />
           <div className="absolute inset-0 bg-gradient-to-tr from-background/30 via-transparent to-transparent pointer-events-none" />
-        </div>
-        {badge && (
-          <div className={`absolute ${imgFirst ? "-bottom-6 -right-6" : "-bottom-6 -left-6"} glass rounded-2xl px-4 py-3 float`}>
-            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">{badge.label}</div>
-            <div className="text-sm font-medium">{badge.value}</div>
-          </div>
-        )}
-        <div className={`hidden sm:block absolute ${imgFirst ? "-top-5 -left-5" : "-top-5 -right-5"} glass rounded-2xl px-4 py-3 float-slow`}>
-          <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Live</div>
-          <div className="text-sm font-medium">Real-time 3D</div>
         </div>
       </div>
     </Reveal>
