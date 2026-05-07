@@ -33,9 +33,9 @@ export function Footer() {
         <div>
           <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Reach us</div>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-            <li>contact@ramxrsolutions.com</li>
-            <li>+91 XXXXX XXXXX</li>
-            <li>India</li>
+            <li>info@ramxrsolutions.com</li>
+            <li>+91 97665 25043</li>
+            <li>pune,India</li>
           </ul>
         </div>
       </div>

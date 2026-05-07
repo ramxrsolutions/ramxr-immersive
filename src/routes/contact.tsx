@@ -22,9 +22,9 @@ export const Route = createFileRoute("/contact")({
 
 function Contact() {
   const items = [
-    { icon: Mail, label: "Email", value: "contact@ramxrsolutions.com" },
-    { icon: Phone, label: "Phone", value: "+91 XXXXX XXXXX" },
-    { icon: MapPin, label: "Location", value: "India" },
+    { icon: Mail, label: "Email", value: "info@ramxrsolutions.com" },
+    { icon: Phone, label: "Phone", value: "+91 97665 25043" },
+    { icon: MapPin, label: "Location", value: "pune,India" },
   ];
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">

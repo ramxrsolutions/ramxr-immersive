@@ -35,10 +35,7 @@ function About() {
         eyebrow="Who we are"
         heading={<>A platform built for <span className="text-gradient-brand">deeper understanding</span>.</>}
         body={
-          <>
-            <p>RamXR Solutions is focused on transforming education and training through immersive virtual reality experiences.</p>
-            <p>This creates a more intuitive and engaging way to understand complex subjects one where curiosity leads, and the environment responds.</p>
-          </>
+          <p>RamXR Solutions is focused on transforming education and training through immersive virtual reality experiences. This creates a more intuitive and engaging way to understand complex subjects one where curiosity leads, and the environment responds.</p>
         }
           // badge={{ label: "Studio", value: "Experience Design" }}
       />

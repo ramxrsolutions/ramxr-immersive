@@ -35,10 +35,7 @@ function Home() {
         eyebrow="Intro"
         heading={<>Learning <span className="text-gradient-brand">beyond screens</span>.</>}
         body={
-          <>
-            <p>Traditional learning limits understanding to text and static visuals. RamXR Solutions introduces an interactive approach where users can step inside virtual environments, explore objects from every angle, and understand how systems truly work.</p>
-            <p>By combining virtual reality with structured educational design, we enable deeper comprehension and long-term retention.</p>
-          </>
+          <p>Traditional learning limits understanding to text and static visuals. RamXR Solutions introduces an interactive approach where users can step inside virtual environments, explore objects from every angle, and understand how systems truly work. By combining virtual reality with structured educational design, we enable deeper comprehension and long-term retention.</p>
         }
         chips={[
           { title: "Interactive Learning", desc: "Move beyond passive reading. Manipulate models, isolate parts, and learn by doing.", icon: <Box className="h-5 w-5" /> },
@@ -87,15 +84,7 @@ function Home() {
         eyebrow="Layered Understanding"
         heading={<>Layered Understanding</>}
         body={
-          <>
-            <p>Complex systems aren’t meant to be understood all at once.</p>
-            <p>We break models into layers so users can progressively reveal complexity from basic structure to deep technical details.</p>
-            <ul className="mt-3 space-y-1 list-none">
-              <li>• Toggle between beginner and advanced views</li>
-              <li>• Hide or isolate subsystems instantly</li>
-              <li>• Understand relationships between components clearly</li>
-            </ul>
-          </>
+          <p>Complex systems aren’t meant to be understood all at once. We break models into layers so users can progressively reveal complexity from basic structure to deep technical details. • Toggle between beginner and advanced views • Hide or isolate subsystems instantly • Understand relationships between components clearly</p>
         }
         chips={[
           { title: "Toggle views", desc: "Switch between beginner and advanced perspectives", icon: <Box className="h-5 w-5" /> },
