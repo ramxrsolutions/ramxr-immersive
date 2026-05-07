@@ -62,7 +62,16 @@ function Home() {
         badge={{ label: "Latency", value: "12 ms · Real-time" }}
       />
 
-      <div style={{ maxWidth: "70%", margin: "0 auto" }}>
+      <div
+        style={{
+          maxWidth: "70%",
+          margin: "0 auto",
+          ["--gradient-brand" as string]: "linear-gradient(135deg, #FF7A45 0%, #FF5E8A 100%)",
+          ["--orange-glow" as string]: "#FF7A45",
+          ["--pink-glow" as string]: "#FF5E8A",
+          ["--shadow-glow" as string]: "0 24px 70px -22px rgba(255, 94, 138, 0.42)",
+        }}
+      >
         <FloatingRow
           side="left"
           image={hologram}
@@ -85,7 +94,7 @@ function Home() {
         image={vrHeadset}
         alt="Layered understanding of complex systems"
         eyebrow="Layered Understanding"
-        heading={<>🧩 Layered Understanding</>}
+        heading={<>Layered Understanding</>}
         body={
           <>
             <p>Complex systems aren’t meant to be understood all at once.</p>
@@ -189,7 +198,15 @@ function Metrics() {
     { k: "Real-world", v: "Focused on practical, applied understanding" },
   ];
   return (
-    <section className="py-20">
+    <section
+      className="py-20"
+      style={{
+        ["--gradient-brand" as string]: "linear-gradient(135deg, #FF7A45 0%, #FF5E8A 100%)",
+        ["--orange-glow" as string]: "#FF7A45",
+        ["--pink-glow" as string]: "#FF5E8A",
+        ["--shadow-glow" as string]: "0 24px 70px -22px rgba(255, 94, 138, 0.42)",
+      }}
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal>
           <div className="max-w-2xl mb-10">
