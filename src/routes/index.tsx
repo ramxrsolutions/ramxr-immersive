@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Play, Sparkles, Box, Layers, Eye, GraduationCap, MessageSquare } from "lucide-react";
+import { ArrowRight, Play, Sparkles, Box, Layers, Eye, GraduationCap, MessageSquare, MousePointer2, Workflow, Compass } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { FloatingRow } from "@/components/FloatingRow";
 import heroImg from "@/assets/ramxr-hero.png";
-import vrExperience from "@/assets/Nakul_Daa.png";
+import hologram from "@/assets/hologram.jpg";
 import vrHeadset from "@/assets/Ima.jpg";
 import vrClassroom from "@/assets/vr-classroom.jpg";
 import vrEngineer from "@/assets/vr-engineer.jpg";
@@ -64,25 +64,16 @@ function Home() {
 
       <FloatingRow
         side="left"
-        image={vrExperience}
-        alt="Precision learning guided pathways"
-        eyebrow="Precision Learning"
-        heading={<>🚀 Precision Learning</>}
-        body={
-          <>
-            <p>Not all interactions are meaningful. We design guided learning paths inside VR so users focus on what matters most.</p>
-            <p>Users don’t just explore randomly — they follow structured sequences that build understanding step by step.</p>
-            <ul className="mt-3 space-y-1 list-none">
-              <li>• Guided pathways for complex systems</li>
-              <li>• Context-aware instructions inside VR</li>
-              <li>• Reduced cognitive overload through smart design</li>
-            </ul>
-          </>
-        }
+        image={hologram}
+        alt="Holographic UI"
+        eyebrow="Approach"
+        heading={<>How we <span className="text-gradient-brand">build experiences</span>.</>}
+        body={<p>Every VR module is designed with clarity and interaction in mind. The goal is simple — make complex concepts easy to explore.</p>}
         chips={[
-          { title: "Guided pathways", desc: "Guided pathways for complex systems", icon: <Play className="h-5 w-5" /> },
-          { title: "Context-aware", desc: "Context-aware instructions inside VR", icon: <MessageSquare className="h-5 w-5" /> },
-          { title: "Reduced overload", desc: "Reduced cognitive overload through smart design", icon: <Layers className="h-5 w-5" /> },
+          { title: "Structured 3D modeling", desc: "Accurate geometry and clean topology, ready for interaction.", icon: <Layers className="h-5 w-5" /> },
+          { title: "Component-level interaction", desc: "Every meaningful part can be selected and studied.", icon: <MousePointer2 className="h-5 w-5" /> },
+          { title: "Real-time information", desc: "Context appears in the moment it’s needed.", icon: <Workflow className="h-5 w-5" /> },
+          { title: "Smooth navigation", desc: "Move through environments without friction.", icon: <Compass className="h-5 w-5" /> },
         ]}
       />
 

@@ -5,7 +5,6 @@ import { Footer } from "@/components/Footer";
 import { FloatingRow, PageHero } from "@/components/FloatingRow";
 import vrTeam from "@/assets/vr-team.jpg";
 import vrBrain from "@/assets/vr-brain.jpg";
-import hologram from "@/assets/hologram.jpg";
 
 export const Route = createFileRoute("/about")({
   component: About,
@@ -61,20 +60,7 @@ function About() {
         ]}
         badge={{ label: "Mission", value: "Experience knowledge" }}
       />
-      <FloatingRow
-        side="left"
-        image={hologram}
-        alt="Holographic UI"
-        eyebrow="Approach"
-        heading={<>How we <span className="text-gradient-brand">build experiences</span>.</>}
-        body={<p>Every VR module is designed with clarity and interaction in mind. The goal is simple — make complex concepts easy to explore.</p>}
-        chips={[
-          { title: "Structured 3D modeling", desc: "Accurate geometry and clean topology, ready for interaction.", icon: <Layers className="h-5 w-5" /> },
-          { title: "Component-level interaction", desc: "Every meaningful part can be selected and studied.", icon: <MousePointer2 className="h-5 w-5" /> },
-          { title: "Real-time information", desc: "Context appears in the moment it’s needed.", icon: <Workflow className="h-5 w-5" /> },
-          { title: "Smooth navigation", desc: "Move through environments without friction.", icon: <Compass className="h-5 w-5" /> },
-        ]}
-      />
+      {/* 'How we build experiences' moved to Home; original image removed per task instructions */}
       <Footer />
     </div>
   );
