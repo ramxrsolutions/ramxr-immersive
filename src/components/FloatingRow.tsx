@@ -84,10 +84,12 @@ export function PageHero({
   eyebrow,
   title,
   subtitle,
+  description,
 }: {
   eyebrow: string;
   title: ReactNode;
   subtitle?: string;
+  description?: ReactNode;
 }) {
   return (
     <section className="relative pt-36 pb-12 sm:pt-44 sm:pb-16 bg-hero-glow">
@@ -108,6 +110,11 @@ export function PageHero({
         {subtitle && (
           <Reveal delay={160}>
             <p className="mt-5 max-w-2xl text-lg text-muted-foreground">{subtitle}</p>
+          </Reveal>
+        )}
+        {description && (
+          <Reveal delay={240}>
+            <div className="mt-6 max-w-3xl text-base sm:text-lg text-muted-foreground leading-relaxed">{description}</div>
           </Reveal>
         )}
       </div>

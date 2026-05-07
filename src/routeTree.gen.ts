@@ -15,6 +15,10 @@ import { Route as DemoRouteImport } from './routes/demo'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SolutionsIndexRouteImport } from './routes/solutions/index'
+import { Route as SolutionsVeterinaryRouteImport } from './routes/solutions/veterinary'
+import { Route as SolutionsMedicalRouteImport } from './routes/solutions/medical'
+import { Route as SolutionsEngineeringRouteImport } from './routes/solutions/engineering'
 
 const SolutionsRoute = SolutionsRouteImport.update({
   id: '/solutions',
@@ -46,6 +50,26 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolutionsIndexRoute = SolutionsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => SolutionsRoute,
+} as any)
+const SolutionsVeterinaryRoute = SolutionsVeterinaryRouteImport.update({
+  id: '/veterinary',
+  path: '/veterinary',
+  getParentRoute: () => SolutionsRoute,
+} as any)
+const SolutionsMedicalRoute = SolutionsMedicalRouteImport.update({
+  id: '/medical',
+  path: '/medical',
+  getParentRoute: () => SolutionsRoute,
+} as any)
+const SolutionsEngineeringRoute = SolutionsEngineeringRouteImport.update({
+  id: '/engineering',
+  path: '/engineering',
+  getParentRoute: () => SolutionsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -53,7 +77,11 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/demo': typeof DemoRoute
   '/projects': typeof ProjectsRoute
-  '/solutions': typeof SolutionsRoute
+  '/solutions': typeof SolutionsRouteWithChildren
+  '/solutions/engineering': typeof SolutionsEngineeringRoute
+  '/solutions/medical': typeof SolutionsMedicalRoute
+  '/solutions/veterinary': typeof SolutionsVeterinaryRoute
+  '/solutions/': typeof SolutionsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -61,7 +89,10 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/demo': typeof DemoRoute
   '/projects': typeof ProjectsRoute
-  '/solutions': typeof SolutionsRoute
+  '/solutions/engineering': typeof SolutionsEngineeringRoute
+  '/solutions/medical': typeof SolutionsMedicalRoute
+  '/solutions/veterinary': typeof SolutionsVeterinaryRoute
+  '/solutions': typeof SolutionsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -70,13 +101,36 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/demo': typeof DemoRoute
   '/projects': typeof ProjectsRoute
-  '/solutions': typeof SolutionsRoute
+  '/solutions': typeof SolutionsRouteWithChildren
+  '/solutions/engineering': typeof SolutionsEngineeringRoute
+  '/solutions/medical': typeof SolutionsMedicalRoute
+  '/solutions/veterinary': typeof SolutionsVeterinaryRoute
+  '/solutions/': typeof SolutionsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/demo' | '/projects' | '/solutions'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/demo'
+    | '/projects'
+    | '/solutions'
+    | '/solutions/engineering'
+    | '/solutions/medical'
+    | '/solutions/veterinary'
+    | '/solutions/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/demo' | '/projects' | '/solutions'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/demo'
+    | '/projects'
+    | '/solutions/engineering'
+    | '/solutions/medical'
+    | '/solutions/veterinary'
+    | '/solutions'
   id:
     | '__root__'
     | '/'
@@ -85,6 +139,10 @@ export interface FileRouteTypes {
     | '/demo'
     | '/projects'
     | '/solutions'
+    | '/solutions/engineering'
+    | '/solutions/medical'
+    | '/solutions/veterinary'
+    | '/solutions/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -93,7 +151,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DemoRoute: typeof DemoRoute
   ProjectsRoute: typeof ProjectsRoute
-  SolutionsRoute: typeof SolutionsRoute
+  SolutionsRoute: typeof SolutionsRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -140,8 +198,54 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solutions/': {
+      id: '/solutions/'
+      path: '/'
+      fullPath: '/solutions/'
+      preLoaderRoute: typeof SolutionsIndexRouteImport
+      parentRoute: typeof SolutionsRoute
+    }
+    '/solutions/veterinary': {
+      id: '/solutions/veterinary'
+      path: '/veterinary'
+      fullPath: '/solutions/veterinary'
+      preLoaderRoute: typeof SolutionsVeterinaryRouteImport
+      parentRoute: typeof SolutionsRoute
+    }
+    '/solutions/medical': {
+      id: '/solutions/medical'
+      path: '/medical'
+      fullPath: '/solutions/medical'
+      preLoaderRoute: typeof SolutionsMedicalRouteImport
+      parentRoute: typeof SolutionsRoute
+    }
+    '/solutions/engineering': {
+      id: '/solutions/engineering'
+      path: '/engineering'
+      fullPath: '/solutions/engineering'
+      preLoaderRoute: typeof SolutionsEngineeringRouteImport
+      parentRoute: typeof SolutionsRoute
+    }
   }
 }
+
+interface SolutionsRouteChildren {
+  SolutionsEngineeringRoute: typeof SolutionsEngineeringRoute
+  SolutionsMedicalRoute: typeof SolutionsMedicalRoute
+  SolutionsVeterinaryRoute: typeof SolutionsVeterinaryRoute
+  SolutionsIndexRoute: typeof SolutionsIndexRoute
+}
+
+const SolutionsRouteChildren: SolutionsRouteChildren = {
+  SolutionsEngineeringRoute: SolutionsEngineeringRoute,
+  SolutionsMedicalRoute: SolutionsMedicalRoute,
+  SolutionsVeterinaryRoute: SolutionsVeterinaryRoute,
+  SolutionsIndexRoute: SolutionsIndexRoute,
+}
+
+const SolutionsRouteWithChildren = SolutionsRoute._addFileChildren(
+  SolutionsRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -149,7 +253,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DemoRoute: DemoRoute,
   ProjectsRoute: ProjectsRoute,
-  SolutionsRoute: SolutionsRoute,
+  SolutionsRoute: SolutionsRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
