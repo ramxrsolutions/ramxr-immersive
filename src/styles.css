@@ -157,8 +157,8 @@
   .ramxr-gradient-theme {
     --gradient-brand: linear-gradient(135deg, #FF9A5A 0%, #FF7A45 20%, #FF5E8A 65%, #FF73A8 100%);
     --orange-glow: rgba(255,154,90,0.18);
-    --pink-glow: rgba(255,94,138,0.32);
-    --shadow-glow: 0 30px 80px -22px rgba(255,94,138,0.28);
+    --pink-glow: rgba(255,94,138,0.38);
+    --shadow-glow: 0 30px 80px -22px rgba(255,94,138,0.3);
     position: relative;
   }
 
@@ -167,19 +167,69 @@
     content: "";
     position: absolute;
     pointer-events: none;
-    right: -8%;
+    right: -10%;
     top: 0;
     bottom: 0;
-    width: 46%;
+    width: 52%;
     border-radius: inherit;
-    background: radial-gradient(closest-side at 85% 50%, rgba(255,115,168,0.16), transparent 36%);
+    background: radial-gradient(closest-side at 86% 52%, rgba(255,115,168,0.2), rgba(255,94,138,0.1) 30%, transparent 62%);
     mix-blend-mode: normal;
-    opacity: 1;
+    opacity: 0.9;
   }
 
   /* hover accent for elements inside theme */
   .ramxr-gradient-theme .hover-lift:hover {
     box-shadow: var(--shadow-glow);
+  }
+
+  .ramxr-metrics-theme {
+    isolation: isolate;
+  }
+
+  .ramxr-metrics-shell {
+    box-shadow: 0 24px 70px -40px rgba(255,94,138,0.4);
+  }
+
+  .ramxr-metrics-shell::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, transparent 52%, rgba(255,94,138,0.08) 84%, rgba(255,115,168,0.12) 100%);
+  }
+
+  .ramxr-footer-theme {
+    position: relative;
+  }
+
+  .ramxr-footer-theme::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,154,90,0.5), rgba(255,94,138,0.6), rgba(255,115,168,0.7));
+    pointer-events: none;
+  }
+
+  .ramxr-footer-divider {
+    border-top-color: rgba(255,94,138,0.22);
+    background-image: linear-gradient(90deg, rgba(255,154,90,0.08), rgba(255,94,138,0.08) 60%, rgba(255,115,168,0.12));
+  }
+
+  .ramxr-footer-logo {
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.16), 0 18px 34px -20px rgba(255,94,138,0.55);
+  }
+
+  .ramxr-footer-link {
+    position: relative;
+  }
+
+  .ramxr-footer-link:hover {
+    color: #ff6f96;
+    text-shadow: 0 0 14px rgba(255,115,168,0.28);
   }
 }
 

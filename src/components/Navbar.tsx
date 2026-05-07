@@ -5,9 +5,7 @@ import { BookCallDialog } from "./BookCallDialog";
 const items = [
   { label: "Home", to: "/" as const },
   { label: "About", to: "/about" as const },
-  { label: "Projects", to: "/projects" as const },
   { label: "Solutions", to: "/solutions" as const },
-  { label: "Demo", to: "/demo" as const },
   { label: "Contact", to: "/contact" as const },
 ];
 

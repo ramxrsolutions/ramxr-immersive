@@ -136,16 +136,7 @@ function Hero() {
                 RamXR Solutions transforms how knowledge is experienced. Explore complex systems through fully interactive 3D environments where every component can be seen, understood, and experienced in real time.
               </p>
             </Reveal>
-            <Reveal delay={260}>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link to="/demo" className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-6 py-3 text-sm font-medium text-primary-foreground hover-lift">
-                  <Play className="h-4 w-4" /> View in Action
-                </Link>
-                <Link to="/projects" className="inline-flex items-center gap-2 rounded-full glass gradient-border px-6 py-3 text-sm font-medium hover-lift">
-                  Explore Projects <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </Reveal>
+            
           </div>
 
           <div className="lg:col-span-6 lg:order-1 relative">
@@ -189,7 +180,7 @@ function Metrics() {
     { k: "Real-world", v: "Focused on practical, applied understanding" },
   ];
   return (
-    <section className="py-20 ramxr-gradient-theme">
+    <section className="py-20 ramxr-gradient-theme ramxr-metrics-theme">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal>
           <div className="max-w-2xl mb-10">
@@ -197,8 +188,8 @@ function Metrics() {
             <h2 className="mt-3 text-3xl sm:text-4xl font-semibold">Growing through innovation.</h2>
           </div>
         </Reveal>
-        <div className="rounded-3xl glass gradient-border p-8 sm:p-12 relative overflow-hidden">
-          <div className="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-gradient-brand opacity-20 blur-3xl drift" />
+        <div className="rounded-3xl glass gradient-border ramxr-metrics-shell p-8 sm:p-12 relative overflow-hidden">
+          <div className="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-gradient-brand opacity-18 blur-3xl drift" />
           <div className="grid md:grid-cols-3 gap-8 relative">
             {stats.map((s, i) => (
               <Reveal key={i} delay={i * 80}>
