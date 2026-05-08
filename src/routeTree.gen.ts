@@ -16,7 +16,6 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SolutionsIndexRouteImport } from './routes/solutions/index'
-import { Route as SolutionsVeterinaryRouteImport } from './routes/solutions/veterinary'
 import { Route as SolutionsMedicalRouteImport } from './routes/solutions/medical'
 import { Route as SolutionsEngineeringRouteImport } from './routes/solutions/engineering'
 
@@ -55,11 +54,6 @@ const SolutionsIndexRoute = SolutionsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => SolutionsRoute,
 } as any)
-const SolutionsVeterinaryRoute = SolutionsVeterinaryRouteImport.update({
-  id: '/veterinary',
-  path: '/veterinary',
-  getParentRoute: () => SolutionsRoute,
-} as any)
 const SolutionsMedicalRoute = SolutionsMedicalRouteImport.update({
   id: '/medical',
   path: '/medical',
@@ -80,7 +74,6 @@ export interface FileRoutesByFullPath {
   '/solutions': typeof SolutionsRouteWithChildren
   '/solutions/engineering': typeof SolutionsEngineeringRoute
   '/solutions/medical': typeof SolutionsMedicalRoute
-  '/solutions/veterinary': typeof SolutionsVeterinaryRoute
   '/solutions/': typeof SolutionsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -91,7 +84,6 @@ export interface FileRoutesByTo {
   '/projects': typeof ProjectsRoute
   '/solutions/engineering': typeof SolutionsEngineeringRoute
   '/solutions/medical': typeof SolutionsMedicalRoute
-  '/solutions/veterinary': typeof SolutionsVeterinaryRoute
   '/solutions': typeof SolutionsIndexRoute
 }
 export interface FileRoutesById {
@@ -104,7 +96,6 @@ export interface FileRoutesById {
   '/solutions': typeof SolutionsRouteWithChildren
   '/solutions/engineering': typeof SolutionsEngineeringRoute
   '/solutions/medical': typeof SolutionsMedicalRoute
-  '/solutions/veterinary': typeof SolutionsVeterinaryRoute
   '/solutions/': typeof SolutionsIndexRoute
 }
 export interface FileRouteTypes {
@@ -118,7 +109,6 @@ export interface FileRouteTypes {
     | '/solutions'
     | '/solutions/engineering'
     | '/solutions/medical'
-    | '/solutions/veterinary'
     | '/solutions/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -129,7 +119,6 @@ export interface FileRouteTypes {
     | '/projects'
     | '/solutions/engineering'
     | '/solutions/medical'
-    | '/solutions/veterinary'
     | '/solutions'
   id:
     | '__root__'
@@ -141,7 +130,6 @@ export interface FileRouteTypes {
     | '/solutions'
     | '/solutions/engineering'
     | '/solutions/medical'
-    | '/solutions/veterinary'
     | '/solutions/'
   fileRoutesById: FileRoutesById
 }
@@ -205,13 +193,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolutionsIndexRouteImport
       parentRoute: typeof SolutionsRoute
     }
-    '/solutions/veterinary': {
-      id: '/solutions/veterinary'
-      path: '/veterinary'
-      fullPath: '/solutions/veterinary'
-      preLoaderRoute: typeof SolutionsVeterinaryRouteImport
-      parentRoute: typeof SolutionsRoute
-    }
     '/solutions/medical': {
       id: '/solutions/medical'
       path: '/medical'
@@ -232,14 +213,12 @@ declare module '@tanstack/react-router' {
 interface SolutionsRouteChildren {
   SolutionsEngineeringRoute: typeof SolutionsEngineeringRoute
   SolutionsMedicalRoute: typeof SolutionsMedicalRoute
-  SolutionsVeterinaryRoute: typeof SolutionsVeterinaryRoute
   SolutionsIndexRoute: typeof SolutionsIndexRoute
 }
 
 const SolutionsRouteChildren: SolutionsRouteChildren = {
   SolutionsEngineeringRoute: SolutionsEngineeringRoute,
   SolutionsMedicalRoute: SolutionsMedicalRoute,
-  SolutionsVeterinaryRoute: SolutionsVeterinaryRoute,
   SolutionsIndexRoute: SolutionsIndexRoute,
 }
 

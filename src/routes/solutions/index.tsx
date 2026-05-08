@@ -55,12 +55,6 @@ function SolutionsIndex() {
             >
               Medical <ArrowRight className="h-4 w-4 opacity-70" />
             </Link>
-            <Link
-              to="/solutions/veterinary"
-              className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border border-border bg-background/60 hover:bg-muted transition-colors"
-            >
-              Veterinary <ArrowRight className="h-4 w-4 opacity-70" />
-            </Link>
           </div>
         </div>
       </section>

@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 const solutionLinks = [
   { label: "Engineering", to: "/solutions/engineering" as const },
   { label: "Medical", to: "/solutions/medical" as const },
-  { label: "Veterinary", to: "/solutions/veterinary" as const },
 ];
 
 const items = [
