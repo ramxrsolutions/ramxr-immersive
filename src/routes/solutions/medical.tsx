@@ -4,9 +4,9 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FloatingRow, PageHero } from "@/components/FloatingRow";
 import { StreamsSection, AIAssistantSection } from "@/components/SolutionLabSections";
-import vrTraining from "@/assets/vr-training.jpg";
-import hologram from "@/assets/hologram.jpg";
-import vrClassroom from "@/assets/vr-classroom.jpg";
+import phar1 from "@/assets/phar1.jpg";
+import phar2 from "@/assets/phar2.jpeg";
+import phar3 from "@/assets/phar3.jpg";
 
 export const Route = createFileRoute("/solutions/medical")({
   component: Medical,
@@ -83,7 +83,7 @@ function Medical() {
 
       <FloatingRow
         side="right"
-        image={hologram}
+        image={phar1}
         alt="Medical holographic anatomy visualization"
         eyebrow="Spatial medicine"
         heading={
@@ -113,7 +113,7 @@ function Medical() {
 
       <FloatingRow
         side="left"
-        image={vrTraining}
+        image={phar2}
         alt="Clinical skills training in VR"
         eyebrow="Hands & habits"
         heading={
@@ -143,7 +143,7 @@ function Medical() {
 
       <FloatingRow
         side="right"
-        image={vrClassroom}
+        image={phar3}
         alt="Medical students in collaborative VR review"
         eyebrow="Programs that adopt faster"
         heading={

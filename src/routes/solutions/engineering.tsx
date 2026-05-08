@@ -4,9 +4,9 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FloatingRow, PageHero } from "@/components/FloatingRow";
 import { StreamsSection, AIAssistantSection } from "@/components/SolutionLabSections";
-import vrEngineer from "@/assets/vr-engineer.jpg";
-import vrTraining from "@/assets/vr-training.jpg";
-import vrClassroom from "@/assets/vr-classroom.jpg";
+import engg from "@/assets/engg.png";
+import engg2 from "@/assets/engg2.webp";
+import engg3 from "@/assets/engg3.jpg";
 
 export const Route = createFileRoute("/solutions/engineering")({
   component: Engineering,
@@ -85,7 +85,7 @@ function Engineering() {
 
       <FloatingRow
         side="left"
-        image={vrEngineer}
+        image={engg}
         alt="Engineering student using VR lab equipment"
         eyebrow="Built for depth"
         heading={
@@ -120,7 +120,7 @@ function Engineering() {
 
       <FloatingRow
         side="right"
-        image={vrTraining}
+        image={engg2}
         alt="VR simulation of industrial systems"
         eyebrow="From lecture to lab"
         heading={
@@ -150,7 +150,7 @@ function Engineering() {
 
       <FloatingRow
         side="left"
-        image={vrClassroom}
+        image={engg3}
         alt="Collaborative VR classroom"
         eyebrow="Why RamXR"
         heading={
