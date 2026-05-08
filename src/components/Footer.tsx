@@ -13,7 +13,9 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-14 grid md:grid-cols-3 gap-10">
         <div>
           <div className="flex items-center gap-2">
+            {/*
             <span className="h-8 w-8 rounded-lg bg-gradient-brand ramxr-footer-logo grid place-items-center text-primary-foreground font-bold">R</span>
+            */}
             <span className="font-display text-lg sm:text-xl font-semibold tracking-tight">RamXR <span className="text-gradient-brand">Solutions</span></span>
           </div>
           <p className="mt-4 text-base sm:text-[1.05rem] leading-7 text-muted-foreground max-w-sm">

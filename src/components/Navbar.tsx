@@ -46,10 +46,12 @@ export function Navbar() {
           className={`flex items-center justify-between rounded-2xl px-4 py-3 transition-all duration-500 ${scrolled ? "glass shadow-glow" : ""}`}
         >
           <Link to="/" className="flex items-center gap-2">
+            {/*
             <span className="relative h-8 w-8 rounded-lg bg-gradient-brand grid place-items-center">
               <span className="absolute inset-0 rounded-lg bg-gradient-brand blur-md opacity-60 pulse-glow" />
               <span className="relative text-primary-foreground font-bold text-sm">R</span>
             </span>
+            */}
             <span className="font-display font-semibold tracking-tight">
               RamXR <span className="text-gradient-brand">Solutions</span>
             </span>
