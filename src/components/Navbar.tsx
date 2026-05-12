@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { ChevronDown } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
 import { BookCallDialog } from "./BookCallDialog";
 import { cn } from "@/lib/utils";
 
@@ -131,7 +130,6 @@ export function Navbar() {
           </ul>
 
           <div className="flex items-center gap-3">
-            <ThemeToggle />
             <BookCallDialog>
               <button className="hidden sm:inline-flex items-center rounded-full px-4 py-2 text-sm font-medium bg-gradient-brand text-primary-foreground hover-lift cursor-pointer">
                 Book a Demo
