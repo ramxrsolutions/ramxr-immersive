@@ -1,6 +1,6 @@
 export const submitContactForm = async ({ data }: { data: { name: string; email: string; phone: string; message: string } }) => {
   try {
-    const BREVO_API_KEY = import.meta.env.VITE_BREVO_API_KEY || "dummy"; // Replace with your actual key if using client-side
+    const BREVO_API_KEY = import.meta.env.VITE_BREVO_API_KEY || ""; // DO NOT expose private keys in client builds
 
     const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL || "ramxrsolutions@gmail.com";
     const SENDER_EMAIL = import.meta.env.VITE_SENDER_EMAIL || "ramxrsolutions@gmail.com";
@@ -9,6 +9,15 @@ export const submitContactForm = async ({ data }: { data: { name: string; email:
     console.log(`[Contact Form] Sending admin notification to: ${ADMIN_EMAIL}`);
     console.log(`[Contact Form] Sender: ${SENDER_EMAIL}`);
     console.log(`[Contact Form] From: ${data.name} <${data.email}>`);
+
+    // Guard: ensure an API key is present. Prefer calling this from a server-side endpoint
+    if (!BREVO_API_KEY) {
+      console.error('[Contact Form] Missing Brevo API key (VITE_BREVO_API_KEY). Do not expose private keys in client-side builds.');
+      return {
+        success: false,
+        error: 'Missing Brevo API key. Configure a server-side endpoint or set VITE_BREVO_API_KEY for development only.'
+      };
+    }
 
     // Notify the admin with full form details
     const adminEmailRes = await fetch("https://api.brevo.com/v3/smtp/email", {
