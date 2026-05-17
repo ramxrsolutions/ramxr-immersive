@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import React from 'react'
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -7,24 +7,11 @@ import { PageHero } from "@/components/FloatingRow";
 import vrGear from "@/assets/vr-gear.jpg";
 import { BookCallDialog } from "@/components/BookCallDialog";
 
-export const Route = createFileRoute("/contact")({
-  component: Contact,
-  head: () => ({
-    meta: [
-      { title: "Contact RamXR Solutions" },
-      { name: "description", content: "Reach out to learn more about our immersive VR learning solutions, request a demo, or discuss collaborations." },
-      { property: "og:title", content: "Get in Touch RamXR Solutions" },
-      { property: "og:description", content: "Interested in immersive learning solutions? Reach out to RamXR Solutions." },
-      { property: "og:image", content: vrGear },
-    ],
-  }),
-});
-
-function Contact() {
+export default function Contact() {
   const items = [
     { icon: Mail, label: "Email", value: "info@ramxrsolutions.com" },
     { icon: Phone, label: "Phone", value: "+91 97665 25043" },
-    { icon: MapPin, label: "Location", value: "pune,India" },
+    { icon: MapPin, label: "Location", value: "Pune,India" },
   ];
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
@@ -38,7 +25,7 @@ function Contact() {
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-10 gap-10 lg:gap-14 items-center">
           <Reveal className="lg:col-span-6">
-            <div className="relative rounded-[2rem] overflow-hidden gradient-border float-slow shadow-glow">
+            <div className="relative rounded-4xl overflow-hidden gradient-border float-slow shadow-glow">
               <img src={vrGear} alt="VR gear" loading="lazy" width={1280} height={896} className="w-full h-auto object-cover" />
             </div>
           </Reveal>

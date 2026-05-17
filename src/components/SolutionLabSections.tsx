@@ -57,7 +57,7 @@ export function AIAssistantSection({
   return (
     <section className="py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="glass gradient-border rounded-[2rem] p-8 md:p-12 lg:p-14 relative overflow-hidden hover-lift transition-shadow duration-300">
+        <div className="glass gradient-border rounded-4xl p-8 md:p-12 lg:p-14 relative overflow-hidden hover-lift transition-shadow duration-300">
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.35] dark:opacity-[0.5]"
             aria-hidden

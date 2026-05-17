@@ -1,9 +1,6 @@
-import { createFileRoute, Outlet } from "@tanstack/react-router";
+import React from 'react'
+import { Outlet } from 'react-router-dom'
 
-export const Route = createFileRoute("/solutions")({
-  component: SolutionsLayout,
-});
-
-function SolutionsLayout() {
+export default function SolutionsLayout() {
   return <Outlet />;
 }

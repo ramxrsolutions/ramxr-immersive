@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import React from 'react'
 import { Compass, Layers, MousePointer2, Workflow } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -6,20 +6,7 @@ import { FloatingRow, PageHero } from "@/components/FloatingRow";
 import vrTeam from "@/assets/vr-team.jpg";
 import vrBrain from "@/assets/vr-brain.jpg";
 
-export const Route = createFileRoute("/about")({
-  component: About,
-  head: () => ({
-    meta: [
-      { title: "About RamXR Solutions" },
-      { name: "description", content: "RamXR Solutions is focused on transforming education and training through immersive virtual reality experiences." },
-      { property: "og:title", content: "About RamXR Solutions" },
-      { property: "og:description", content: "Replacing passive learning with interactive exploration through immersive VR." },
-      { property: "og:image", content: vrTeam },
-    ],
-  }),
-});
-
-function About() {
+export default function About() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <Navbar />

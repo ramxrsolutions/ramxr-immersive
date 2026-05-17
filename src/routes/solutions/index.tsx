@@ -1,4 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, GraduationCap, Wrench, Eye, Layers, MousePointer2, Box } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -7,23 +8,7 @@ import vrClassroom from "@/assets/vr-classroom.jpg";
 import vrTraining from "@/assets/vr-training.jpg";
 import vrEngineer from "@/assets/vr-engineer.jpg";
 
-export const Route = createFileRoute("/solutions/")({
-  component: SolutionsIndex,
-  head: () => ({
-    meta: [
-      { title: "Solutions RamXR Solutions" },
-      { name: "description", content: "Applications of immersive VR across education, training, and visualization." },
-      { property: "og:title", content: "Solutions Immersive VR for Education & Training" },
-      {
-        property: "og:description",
-        content: "Virtual reality systems designed to enhance understanding, improve training, and simplify visualization.",
-      },
-      { property: "og:image", content: vrClassroom },
-    ],
-  }),
-});
-
-function SolutionsIndex() {
+export default function SolutionsIndex() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <Navbar />

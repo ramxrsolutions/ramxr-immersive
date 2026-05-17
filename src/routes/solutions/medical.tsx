@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import React from 'react'
 import { Microscope, Stethoscope, Activity, HeartPulse, Brain } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -8,20 +8,6 @@ import phar1 from "@/assets/phar1.jpg";
 import phar2 from "@/assets/phar2.jpeg";
 import phar3 from "@/assets/phar3.jpg";
 
-export const Route = createFileRoute("/solutions/medical")({
-  component: Medical,
-  head: () => ({
-    meta: [
-      { title: "Medical Virtual Labs — RamXR Solutions" },
-      {
-        name: "description",
-        content:
-          "Pre-clinical, para-clinical and clinical VR medical education with AI-guided anatomy, pathology and procedure rehearsal.",
-      },
-    ],
-  }),
-});
-
 const MEDICAL_AI_QUOTES = [
   "Would you like me to show blood flow through the heart again from another angle?",
   "You've mastered muscle groups. Shall we test skeletal landmarks next?",
@@ -30,7 +16,7 @@ const MEDICAL_AI_QUOTES = [
   "Would you like to compare healthy vs pathological tissue samples in VR?",
 ];
 
-function Medical() {
+export default function Medical() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <Navbar />

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from 'react-router-dom'
 import { ArrowRight, Play, Sparkles, Box, Layers, Eye, GraduationCap, MessageSquare, MousePointer2, Workflow, Compass, Move3D } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -10,19 +10,7 @@ import vrHeadset from "@/assets/Ima.jpg";
 import vrClassroom from "@/assets/vr-classroom.jpg";
 import vrEngineer from "@/assets/vr-engineer.jpg";
 
-export const Route = createFileRoute("/")({
-  component: Home,
-  head: () => ({
-    meta: [
-      { title: "RamXR Solutions Step Inside Learning with Virtual Reality" },
-      { name: "description", content: "RamXR Solutions transforms how knowledge is experienced through fully interactive 3D VR environments." },
-      { property: "og:title", content: "RamXR Solutions Immersive VR Learning" },
-      { property: "og:description", content: "Explore complex systems through fully interactive 3D environments where every component can be seen, understood, and experienced in real time." },
-    ],
-  }),
-});
-
-function Home() {
+export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <Navbar />
@@ -102,7 +90,7 @@ function Hero() {
     <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 bg-hero-glow">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute -top-20 -left-20 h-96 w-96 rounded-full bg-gradient-brand opacity-25 blur-3xl drift" />
-        <div className="absolute bottom-0 right-0 h-[28rem] w-[28rem] rounded-full bg-gradient-brand opacity-20 blur-3xl drift" style={{ animationDelay: "-6s" }} />
+        <div className="absolute bottom-0 right-0 h-112 w-md rounded-full bg-gradient-brand opacity-20 blur-3xl drift" style={{ animationDelay: "-6s" }} />
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -130,7 +118,7 @@ function Hero() {
 
           <div className="lg:col-span-6 lg:order-1 relative">
             <Reveal delay={200}>
-              <div className="relative rounded-[2rem] overflow-hidden gradient-border shadow-glow float-slow">
+              <div className="relative rounded-4xl overflow-hidden gradient-border shadow-glow float-slow">
                 <img src={heroImg} alt="RamXR VR headset and controllers" className="w-full h-auto" />
               </div>
             </Reveal>

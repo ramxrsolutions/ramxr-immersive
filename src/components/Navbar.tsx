@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useRouterState } from "@tanstack/react-router";
+import { NavLink, useLocation } from 'react-router-dom'
 import { ChevronDown } from "lucide-react";
 import { BookCallDialog } from "./BookCallDialog";
 import { cn } from "@/lib/utils";
@@ -21,7 +21,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
-  const { location } = useRouterState();
+  const location = useLocation();
 
   const solutionsActive = location.pathname.startsWith("/solutions");
 
@@ -39,11 +39,11 @@ export function Navbar() {
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? "py-3" : "py-5"}`}>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 flex justify-center">
         <nav
-          className={`flex items-center justify-between rounded-2xl px-4 py-3 transition-all duration-500 ${scrolled ? "glass shadow-glow" : ""}`}
+          className={`flex items-center justify-between rounded-2xl px-4 py-3 transition-all duration-500 w-full ${scrolled ? "glass shadow-glow" : ""}`}
         >
-          <Link to="/" className="flex items-center gap-2">
+          <NavLink to="/" className="flex items-center gap-2 shrink-0">
             {/*
             <span className="relative h-8 w-8 rounded-lg bg-gradient-brand grid place-items-center">
               <span className="absolute inset-0 rounded-lg bg-gradient-brand blur-md opacity-60 pulse-glow" />
@@ -51,23 +51,24 @@ export function Navbar() {
             </span>
             */}
             <span className="font-display font-semibold tracking-tight">
-              RamXR <span className="text-gradient-brand">Solutions</span>
+              RamXR
             </span>
-          </Link>
+          </NavLink>
 
-          <ul className="hidden md:flex items-center gap-1">
+          <ul className="hidden md:flex items-center gap-0.5 shrink-0">
             {items.map((item) =>
               !item.dropdown ? (
                 <li key={item.to}>
-                  <Link
+                  <NavLink
                     to={item.to}
-                    className="relative px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
-                    activeProps={{ className: "text-foreground" }}
-                    activeOptions={{ exact: true }}
+                    className={({ isActive }) =>
+                      `relative px-3 py-2 text-sm ${isActive ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'} transition-colors group`
+                    }
+                    end
                   >
                     {item.label}
                     <span className="absolute left-3 right-3 -bottom-0.5 h-px scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 bg-gradient-brand" />
-                  </Link>
+                  </NavLink>
                 </li>
               ) : (
                 <li
@@ -101,26 +102,26 @@ export function Navbar() {
 
                   <div
                     className={cn(
-                      "absolute right-0 top-full z-50 min-w-[13.5rem] pt-2 transition-all duration-300 ease-out",
-                      solutionsOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-1 pointer-events-none"
-                    )}
+                        "absolute right-0 top-full z-50 min-w-54 pt-2 transition-all duration-300 ease-out",
+                        solutionsOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-1 pointer-events-none"
+                      )}
                     role="menu"
                     aria-label="Solutions"
                   >
                     <div className="rounded-xl glass shadow-glow border border-border/50 py-2 overflow-hidden">
                       {item.dropdown.map((sub) => (
-                        <Link
+                        <NavLink
                           key={sub.to}
                           to={sub.to}
                           role="menuitem"
-                          className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-background/60 transition-colors duration-200 mx-1 rounded-lg"
-                          activeProps={{
-                            className:
-                              "block px-4 py-2.5 text-sm text-foreground bg-background/50 transition-colors duration-200 mx-1 rounded-lg font-medium",
-                          }}
+                          className={({ isActive }) =>
+                            isActive
+                              ? 'block px-4 py-2.5 text-sm text-foreground bg-background/50 transition-colors duration-200 mx-1 rounded-lg font-medium'
+                              : 'block px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-background/60 transition-colors duration-200 mx-1 rounded-lg'
+                          }
                         >
                           {sub.label}
-                        </Link>
+                        </NavLink>
                       ))}
                     </div>
                   </div>
@@ -129,7 +130,7 @@ export function Navbar() {
             )}
           </ul>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 shrink-0">
             <BookCallDialog>
               <button className="hidden sm:inline-flex items-center rounded-full px-4 py-2 text-sm font-medium bg-gradient-brand text-primary-foreground hover-lift cursor-pointer">
                 Book a Demo
@@ -157,9 +158,9 @@ export function Navbar() {
             <div className={cn("mt-2 glass rounded-2xl p-3 border border-border/40", open && "reveal")}>
               {items.map((i) =>
                 !i.dropdown ? (
-                  <Link key={i.to} to={i.to} className="block px-3 py-2 text-sm rounded-lg hover:bg-muted transition-colors">
+                  <NavLink key={i.to} to={i.to} className="block px-3 py-2 text-sm rounded-lg hover:bg-muted transition-colors">
                     {i.label}
-                  </Link>
+                  </NavLink>
                 ) : (
                   <div key={i.label}>
                     <button
@@ -183,15 +184,18 @@ export function Navbar() {
                       <div className="min-h-0 overflow-hidden">
                         <div className="mt-1 ml-2 pl-3 border-l border-border/70 space-y-0.5 pb-1">
                           {i.dropdown.map((sub) => (
-                            <Link
-                              key={sub.to}
-                              to={sub.to}
-                              className="block px-3 py-2 text-sm rounded-lg hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
-                              activeProps={{ className: "block px-3 py-2 text-sm rounded-lg bg-muted font-medium text-foreground transition-colors" }}
-                            >
-                              {sub.label}
-                            </Link>
-                          ))}
+                                <NavLink
+                                  key={sub.to}
+                                  to={sub.to}
+                                  className={({ isActive }) =>
+                                    isActive
+                                      ? 'block px-3 py-2 text-sm rounded-lg bg-muted font-medium text-foreground transition-colors'
+                                      : 'block px-3 py-2 text-sm rounded-lg hover:bg-muted transition-colors text-muted-foreground hover:text-foreground'
+                                  }
+                                >
+                                  {sub.label}
+                                </NavLink>
+                              ))}
                         </div>
                       </div>
                     </div>

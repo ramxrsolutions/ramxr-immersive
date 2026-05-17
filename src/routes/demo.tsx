@@ -1,4 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { ArrowRight, Play, MessageSquare, MousePointer2, Layers } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -7,20 +8,7 @@ import hologram from "@/assets/hologram.jpg";
 import vrExperience from "@/assets/vr-experience.jpg";
 import { BookCallDialog } from "@/components/BookCallDialog";
 
-export const Route = createFileRoute("/demo")({
-  component: Demo,
-  head: () => ({
-    meta: [
-      { title: "Demo RamXR Solutions" },
-      { name: "description", content: "Experience immersive learning in real time. Request a guided walkthrough of our VR systems." },
-      { property: "og:title", content: "Experience It Yourself RamXR Demo" },
-      { property: "og:description", content: "See how interaction and visualization can transform learning experiences." },
-      { property: "og:image", content: hologram },
-    ],
-  }),
-});
-
-function Demo() {
+export default function Demo() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <Navbar />

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import React from 'react'
 import { GraduationCap, Zap, Wrench, Layers, Box } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -7,20 +7,6 @@ import { StreamsSection, AIAssistantSection } from "@/components/SolutionLabSect
 import engg from "@/assets/engg.png";
 import engg2 from "@/assets/engg2.webp";
 import engg3 from "@/assets/engg3.jpg";
-
-export const Route = createFileRoute("/solutions/engineering")({
-  component: Engineering,
-  head: () => ({
-    meta: [
-      { title: "Engineering Virtual Labs — RamXR Solutions" },
-      {
-        name: "description",
-        content:
-          "VR-powered engineering labs for mechanical, electrical, and civil streams—with AI-guided simulations aligned to syllabus and industry.",
-      },
-    ],
-  }),
-});
 
 const ENGINEERING_AI_QUOTES = [
   "Do you understand why the current dropped when resistance doubled? Want me to simulate it again with a different value?",
@@ -31,7 +17,7 @@ const ENGINEERING_AI_QUOTES = [
   "Shall I show how heat transfer changes when surface area doubles?",
 ];
 
-function Engineering() {
+export default function Engineering() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <Navbar />

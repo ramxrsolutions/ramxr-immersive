@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from 'react-router-dom'
 
 const links = [
   { label: "Home", to: "/" as const },
@@ -37,7 +37,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-base sm:text-lg leading-7 text-muted-foreground">
             <li>info@ramxrsolutions.com</li>
             <li>+91 97665 25043</li>
-            <li>pune,India</li>
+            <li>Pune,India</li>
           </ul>
         </div>
       </div>

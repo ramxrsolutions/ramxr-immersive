@@ -53,7 +53,7 @@ export function BookCallDialog({ children }: BookCallDialogProps) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-106.25">
         <DialogHeader>
           <DialogTitle>Book a Demo</DialogTitle>
           <DialogDescription>
@@ -72,7 +72,7 @@ export function BookCallDialog({ children }: BookCallDialogProps) {
               onChange={handleChange}
               required
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-              placeholder="John Doe"
+              placeholder="Vr Education"
             />
           </div>
           <div className="space-y-2">
@@ -87,7 +87,7 @@ export function BookCallDialog({ children }: BookCallDialogProps) {
               onChange={handleChange}
               required
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-              placeholder="john@example.com"
+              placeholder="education@example.com"
             />
           </div>
           <div className="space-y-2">
@@ -102,7 +102,7 @@ export function BookCallDialog({ children }: BookCallDialogProps) {
               onChange={handleChange}
               required
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-              placeholder="+1 (555) 000-0000"
+              placeholder="+91 12345-67890"
             />
           </div>
           <div className="space-y-2">
@@ -115,7 +115,7 @@ export function BookCallDialog({ children }: BookCallDialogProps) {
               value={formData.message}
               onChange={handleChange}
               required
-              className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              className="flex min-h-20 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
               placeholder="Tell us about your needs..."
             />
           </div>

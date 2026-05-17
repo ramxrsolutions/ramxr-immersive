@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import React from 'react'
 import { Heart, Box, Layers } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -7,17 +7,7 @@ import vrAnimals from "@/assets/hologram.jpg";
 import vrTraining from "@/assets/vr-training.jpg";
 import { BookCallDialog } from "@/components/BookCallDialog";
 
-export const Route = createFileRoute("/solutions/veterinary")({
-  component: Veterinary,
-  head: () => ({
-    meta: [
-      { title: "Veterinary Virtual Labs — RamXR Solutions" },
-      { name: "description", content: "Advanced VR-based veterinary education for anatomy, diagnostics and clinical training." },
-    ],
-  }),
-});
-
-function Veterinary() {
+export default function Veterinary() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <Navbar />
@@ -113,5 +103,3 @@ function Veterinary() {
     </div>
   );
 }
-
-export default Veterinary;
